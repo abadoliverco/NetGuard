@@ -1,20 +1,20 @@
 package eu.faircode.netguard;
 
 /*
-    This file is part of NetGuard.
+    This file is part of Nexplay.
 
-    NetGuard is free software: you can redistribute it and/or modify
+    Nexplay is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    NetGuard is distributed in the hope that it will be useful,
+    Nexplay is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
+    along with Nexplay.  If not, see <http://www.gnu.org/licenses/>.
 
     Copyright 2015-2019 by Marcel Bokhorst (M66B)
 */
@@ -111,7 +111,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import javax.net.ssl.HttpsURLConnection;
 
 public class ServiceSinkhole extends VpnService implements SharedPreferences.OnSharedPreferenceChangeListener {
-    private static final String TAG = "NetGuard.Service";
+    private static final String TAG = "Nexplay.Service";
 
     private boolean registeredUser = false;
     private boolean registeredIdleState = false;
@@ -2084,7 +2084,7 @@ public class ServiceSinkhole extends VpnService implements SharedPreferences.OnS
     };
 
     ConnectivityManager.NetworkCallback networkMonitorCallback = new ConnectivityManager.NetworkCallback() {
-        private String TAG = "NetGuard.Monitor";
+        private String TAG = "Nexplay.Monitor";
 
         private Map<Network, Long> validated = new HashMap<>();
 
@@ -2286,7 +2286,7 @@ public class ServiceSinkhole extends VpnService implements SharedPreferences.OnS
             TypedValue tv = new TypedValue();
             getTheme().resolveAttribute(R.attr.colorPrimary, tv, true);
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "notify");
-            builder.setSmallIcon(R.drawable.ic_security_white_24dp)
+            builder.setSmallIcon(R.drawable.ic_nexplay_circle_white)
                     .setContentIntent(pi)
                     .setColor(tv.data)
                     .setAutoCancel(true);
@@ -2774,7 +2774,7 @@ public class ServiceSinkhole extends VpnService implements SharedPreferences.OnS
         TypedValue tv = new TypedValue();
         getTheme().resolveAttribute(R.attr.colorPrimary, tv, true);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "foreground");
-        builder.setSmallIcon(isLockedDown(last_metered) ? R.drawable.ic_lock_outline_white_24dp : R.drawable.ic_security_white_24dp)
+        builder.setSmallIcon(isLockedDown(last_metered) ? R.drawable.ic_lock_outline_white_24dp : R.drawable.ic_nexplay_circle_white)
                 .setContentIntent(pi)
                 .setColor(tv.data)
                 .setOngoing(true)
@@ -2838,7 +2838,7 @@ public class ServiceSinkhole extends VpnService implements SharedPreferences.OnS
         TypedValue tv = new TypedValue();
         getTheme().resolveAttribute(R.attr.colorPrimary, tv, true);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "foreground");
-        builder.setSmallIcon(R.drawable.ic_security_white_24dp)
+        builder.setSmallIcon(R.drawable.ic_nexplay_circle_white)
                 .setContentIntent(pi)
                 .setColor(tv.data)
                 .setOngoing(true)
@@ -3027,7 +3027,7 @@ public class ServiceSinkhole extends VpnService implements SharedPreferences.OnS
         TypedValue tv = new TypedValue();
         getTheme().resolveAttribute(R.attr.colorPrimary, tv, true);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "notify");
-        builder.setSmallIcon(R.drawable.ic_security_white_24dp)
+        builder.setSmallIcon(R.drawable.ic_nexplay_circle_white)
                 .setContentTitle(name)
                 .setContentText(getString(R.string.msg_update))
                 .setContentIntent(pi)

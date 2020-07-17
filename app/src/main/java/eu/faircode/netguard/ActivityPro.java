@@ -1,20 +1,20 @@
 package eu.faircode.netguard;
 
 /*
-    This file is part of NetGuard.
+    This file is part of Nexplay.
 
-    NetGuard is free software: you can redistribute it and/or modify
+    Nexplay is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    NetGuard is distributed in the hope that it will be useful,
+    Nexplay is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
+    along with Nexplay.  If not, see <http://www.gnu.org/licenses/>.
 
     Copyright 2015-2019 by Marcel Bokhorst (M66B)
 */
@@ -51,7 +51,7 @@ import androidx.core.app.NavUtils;
 import static android.content.ClipDescription.MIMETYPE_TEXT_PLAIN;
 
 public class ActivityPro extends AppCompatActivity {
-    private static final String TAG = "NetGuard.Pro";
+    private static final String TAG = "Nexplay.Pro";
 
     private IAB iab;
 
@@ -296,7 +296,7 @@ public class ActivityPro extends AppCompatActivity {
 
         String android_id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
         final String challenge = (Build.VERSION.SDK_INT < Build.VERSION_CODES.O ? Build.SERIAL : "O3" + android_id);
-        String seed = (Build.VERSION.SDK_INT < Build.VERSION_CODES.O ? "NetGuard2" : "NetGuard3");
+        String seed = (Build.VERSION.SDK_INT < Build.VERSION_CODES.O ? "Nexplay2" : "Nexplay3");
 
         // Challenge
         TextView tvChallenge = view.findViewById(R.id.tvChallenge);

@@ -2,20 +2,20 @@ package eu.faircode.netguard;
 
 
 /*
-    This file is part of NetGuard.
+    This file is part of Nexplay.
 
-    NetGuard is free software: you can redistribute it and/or modify
+    Nexplay is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    NetGuard is distributed in the hope that it will be useful,
+    Nexplay is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
+    along with Nexplay.  If not, see <http://www.gnu.org/licenses/>.
 
     Copyright 2015-2019 by Marcel Bokhorst (M66B)
 */
@@ -31,7 +31,7 @@ import android.widget.TextView;
 import java.net.InetAddress;
 
 public class ActivityForwardApproval extends Activity {
-    private static final String TAG = "NetGuard.Forward";
+    private static final String TAG = "Nexplay.Forward";
     private static final String ACTION_START_PORT_FORWARD = "eu.faircode.netguard.START_PORT_FORWARD";
     private static final String ACTION_STOP_PORT_FORWARD = "eu.faircode.netguard.STOP_PORT_FORWARD";
 
