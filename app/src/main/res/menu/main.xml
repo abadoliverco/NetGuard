@@ -57,16 +57,16 @@
     <item
         android:id="@+id/menu_settings"
         android:title="@string/menu_settings"/>
-    <item
-        android:id="@+id/menu_pro"
-        android:title="@string/title_pro"/>
-    <item
-        android:id="@+id/menu_invite"
-        android:title="@string/menu_invite"/>
+<!--    <item-->
+<!--        android:id="@+id/menu_pro"-->
+<!--        android:title="@string/title_pro"/>-->
+<!--    <item-->
+<!--        android:id="@+id/menu_invite"-->
+<!--        android:title="@string/menu_invite"/>-->
     <item
         android:id="@+id/menu_legend"
         android:title="@string/menu_legend"/>
-    <item
+<!--    <item
         android:id="@+id/menu_support"
         android:title="@string/menu_support"/>
     <item
@@ -74,5 +74,5 @@
         android:title="@string/menu_about"/>
     <item
         android:id="@+id/menu_apps"
-        android:title="@string/menu_apps"/>
+        android:title="@string/menu_apps"/>-->
 </menu>

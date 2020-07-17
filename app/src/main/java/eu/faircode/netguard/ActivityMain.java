@@ -1,20 +1,20 @@
 package eu.faircode.netguard;
 
 /*
-    This file is part of NetGuard.
+    This file is part of Nexplay.
 
-    NetGuard is free software: you can redistribute it and/or modify
+    Nexplay is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    NetGuard is distributed in the hope that it will be useful,
+    Nexplay is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
+    along with Nexplay.  If not, see <http://www.gnu.org/licenses/>.
 
     Copyright 2015-2019 by Marcel Bokhorst (M66B)
 */
@@ -73,7 +73,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import java.util.List;
 
 public class ActivityMain extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
-    private static final String TAG = "NetGuard.Main";
+    private static final String TAG = "Nexplay.Main";
 
     private boolean running = false;
     private ImageView ivIcon;
@@ -682,8 +682,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
             if (adapter != null)
                 if (intent.hasExtra(EXTRA_CONNECTED) && intent.hasExtra(EXTRA_METERED)) {
                     ivIcon.setImageResource(Util.isNetworkActive(ActivityMain.this)
-                            ? R.drawable.ic_security_white_24dp
-                            : R.drawable.ic_security_white_24dp_60);
+                            ? R.drawable.ic_nexplay_circle_white
+                            : R.drawable.ic_nexplay_circle_white);
                     if (intent.getBooleanExtra(EXTRA_CONNECTED, false)) {
                         if (intent.getBooleanExtra(EXTRA_METERED, false))
                             adapter.setMobileActive();
@@ -780,16 +780,16 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         }
 
         markPro(menu.findItem(R.id.menu_log), ActivityPro.SKU_LOG);
-        if (!IAB.isPurchasedAny(this))
-            markPro(menu.findItem(R.id.menu_pro), null);
+//        if (!IAB.isPurchasedAny(this))
+//            markPro(menu.findItem(R.id.menu_pro), null);
 
-        if (!Util.hasValidFingerprint(this) || getIntentInvite(this).resolveActivity(pm) == null)
-            menu.removeItem(R.id.menu_invite);
+//        if (!Util.hasValidFingerprint(this) || getIntentInvite(this).resolveActivity(pm) == null)
+//            menu.removeItem(R.id.menu_invite);
 
-        if (getIntentSupport().resolveActivity(getPackageManager()) == null)
-            menu.removeItem(R.id.menu_support);
-
-        menu.findItem(R.id.menu_apps).setEnabled(getIntentApps(this).resolveActivity(pm) != null);
+//        if (getIntentSupport().resolveActivity(getPackageManager()) == null)
+//            menu.removeItem(R.id.menu_support);
+//
+//        menu.findItem(R.id.menu_apps).setEnabled(getIntentApps(this).resolveActivity(pm) != null);
 
         return true;
     }
@@ -886,29 +886,29 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                 startActivity(new Intent(this, ActivitySettings.class));
                 return true;
 
-            case R.id.menu_pro:
-                startActivity(new Intent(ActivityMain.this, ActivityPro.class));
-                return true;
+//            case R.id.menu_pro:
+//                startActivity(new Intent(ActivityMain.this, ActivityPro.class));
+//                return true;
 
-            case R.id.menu_invite:
-                startActivityForResult(getIntentInvite(this), REQUEST_INVITE);
-                return true;
+//            case R.id.menu_invite:
+//                startActivityForResult(getIntentInvite(this), REQUEST_INVITE);
+//                return true;
 
             case R.id.menu_legend:
                 menu_legend();
                 return true;
 
-            case R.id.menu_support:
-                startActivity(getIntentSupport());
-                return true;
-
-            case R.id.menu_about:
-                menu_about();
-                return true;
-
-            case R.id.menu_apps:
-                menu_apps();
-                return true;
+//            case R.id.menu_support:
+//                startActivity(getIntentSupport());
+//                return true;
+//
+//            case R.id.menu_about:
+//                menu_about();
+//                return true;
+//
+//            case R.id.menu_apps:
+//                menu_apps();
+//                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
@@ -1275,7 +1275,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
 
     private static Intent getIntentSupport() {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("https://github.com/M66B/NetGuard/blob/master/FAQ.md"));
+        intent.setData(Uri.parse("https://github.com/M66B/Nexplay/blob/master/FAQ.md"));
         return intent;
     }
 

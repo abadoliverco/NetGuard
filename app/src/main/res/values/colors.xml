@@ -42,4 +42,5 @@
     <color name="colorReceive">#0000FF</color>
 
     <color name="colorGrayed">#AAAAAA</color>
+    <color name="colorLightGrayed">#EEEEEE</color>
 </resources>
